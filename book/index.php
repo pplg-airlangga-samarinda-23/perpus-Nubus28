@@ -17,7 +17,7 @@ $books = $koneksi ->execute_query($sql)->fetch_all(MYSQLI_ASSOC);
 </head>
 <body>
     <h1>Book data</h1>
-    <a href="">ADD</a>
+    <a href="create.php">ADD</a>
     <table>
         <thead>
             <th>No</th>
@@ -35,8 +35,8 @@ $books = $koneksi ->execute_query($sql)->fetch_all(MYSQLI_ASSOC);
                           <td><?= $book['Stok'] ?></td>
 
                     <td>
-                        <a href="">Edit</a>
-                        <a href="">Delete</a>
+                        <a href="edit.php">Edit</a>
+                        <a href="delete.php">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach ?>
