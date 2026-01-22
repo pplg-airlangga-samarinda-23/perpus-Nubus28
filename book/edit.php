@@ -2,8 +2,8 @@
 
 include __DIR__ . '/../koneksi.php';
 
-if ($_SERVER ['REQUEST_METHOD']=== 'GET'){
-    $id = $_GET ['id'];
+if ($_SERVER['REQUEST_METHOD']=== 'GET'){
+    $id = $_GET['id'];
     $sql = "SELECT * FROM buku WHERE id=?";
     $book = $koneksi->execute_query($sql, [$id])->fetch_assoc();
 } elseif ($_SERVER['REQUEST_METHOD']=== 'POST'){
